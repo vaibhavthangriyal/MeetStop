@@ -1,0 +1,50 @@
+<div class="container-fluid">
+  <div class="row">
+    <div class="input-group">
+      <input 
+        type="text" 
+        name="CurrentLocation" 
+        placeholder="From" 
+        class="form-control"
+      >
+      <div class="input-group-append">
+        <button class="btn btn-success float right" (click)="mapsService.onFindLocation()">Find</button>
+      </div>
+      
+    </div>
+  </div>
+      <h3 class="text-center">To</h3>
+  <div class="row">
+    <div class="input-group">
+      <input 
+        type="text" 
+        name="Destination" 
+        placeholder="Destination here" 
+        autocomplete="off" 
+        autocorrect="false"
+        spellcheck="false"
+        #destination
+        class="form-control "
+      >
+    </div>
+  </div>
+  <div class="row">
+    <div class="input-group mt-1 float-right">
+      <button type="submit" class="btn btn-success">Go</button>
+    </div>
+  </div>
+
+  <div class="row">
+    <div class="col-lg-6 ">
+      <img src="" alt="">
+      <h4>{{mapsService.currLat | number :'1.2-3'}}</h4>
+      <h4>{{mapsService.currLong | number :'1.2-3'}}</h4>
+    </div>
+    
+    <div class="col-lg-6 ">
+      <img src="" alt="">
+      <h4>{{mapsService.desLat | number :'1.2-3'}}</h4>
+      <h4>{{mapsService.desLong | number :'1.2-3'}}</h4>
+    </div>
+  </div>
+</div>

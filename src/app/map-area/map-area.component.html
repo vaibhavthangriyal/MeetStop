@@ -1,0 +1,9 @@
+<agm-map 
+[latitude]="mapsService.currLat" 
+[longitude]="mapsService.currLong" 
+(mapClick)="mapsService.onMapClick($event)"
+[zoom]="15" 
+>
+  <agm-marker [latitude]="mapsService.currLat" [longitude]="mapsService.currLong"></agm-marker>
+  <agm-marker [latitude]="mapsService.desLat" [longitude]="mapsService.desLong"></agm-marker>
+</agm-map>
